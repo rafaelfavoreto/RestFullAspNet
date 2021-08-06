@@ -20,4 +20,13 @@ C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\ref\RestFullAspNet.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.pdb
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.genruntimeconfig.cache
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.csprojAssemblyReference.cache
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Pomelo.JsonObject.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.csproj.CopyComplete
