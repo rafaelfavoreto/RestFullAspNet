@@ -3,16 +3,14 @@ using RestFullAspNet.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace RestFullAspNet.Services.Implementations
+namespace RestFullAspNet.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {          
         private MysqlContext _context;
 
-        public PersonServiceImplementation(MysqlContext context)
+        public PersonRepositoryImplementation(MysqlContext context)
         {
             _context = context;
         }
@@ -46,7 +44,7 @@ namespace RestFullAspNet.Services.Implementations
         {
             // We check if the person exists in the database
             // If it doesn't exist we return an empty person instance
-            if (!Exists(person.Id)) return new Person();
+            if (!Exists(person.Id)) return null;
 
             // Get the current status of the record in the database
             var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
