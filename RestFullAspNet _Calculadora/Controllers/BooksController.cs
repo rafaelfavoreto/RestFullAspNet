@@ -5,11 +5,15 @@ using RestFullAspNet.Model;
 
 namespace RestFullAspNet.Controllers
 {
+    [ApiVersion("1")]
+    [ApiController]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class BooksController : ControllerBase
     {
         private readonly ILogger<BooksController> _logger;
         private IBooksBusiness _booksBusiness;
-        private BooksController(ILogger<BooksController> logger, IBooksBusiness booksBusiness)
+
+        public BooksController(ILogger<BooksController> logger, IBooksBusiness booksBusiness)
         {
             _logger = logger;
             _booksBusiness = booksBusiness;

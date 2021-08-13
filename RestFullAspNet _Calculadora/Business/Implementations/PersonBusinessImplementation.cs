@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 namespace RestFullAspNet.Business.Implementations
 {
     public class PersonBusinessImplementation : IPersonBusiness
-    {          
-        private IPersonRepository _repository;
+    {
+        private IRepository<Person> _repository;
 
-        public PersonBusinessImplementation(IPersonRepository repository)
+        public PersonBusinessImplementation(IRepository<Person> repository)
         {
             _repository = repository;
         }

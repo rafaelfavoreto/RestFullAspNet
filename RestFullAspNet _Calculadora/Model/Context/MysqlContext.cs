@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RestFullAspNet.Model;
 
 namespace RestFullAspNet.Model.Context
 {

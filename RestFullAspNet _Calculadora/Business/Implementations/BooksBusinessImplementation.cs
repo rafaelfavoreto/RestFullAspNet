@@ -1,42 +1,44 @@
-﻿using RestFullAspNet.Model;
+﻿using RestFullAspNet.Business;
+using RestFullAspNet.Data.Convert.Implementations;
+using RestFullAspNet.Model;
 using RestFullAspNet.Repository;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestFullAspNet.Business.Implementations
 {
     public class BooksBusinessImplementation : IBooksBusiness
     {
-        private IBooksRepository _repository;
-        public BooksBusinessImplementation(IBooksRepository repository)
+        private readonly IRepository<Books> _reposiory;
+        private readonly BookConverter _converter;
+
+        public BooksBusinessImplementation(IRepository<Books> reposiory)
         {
-            _repository = repository;
+            _reposiory = reposiory;
         }
         public Books Create(Books books)
         {
-            return _repository.Create(books);
+            return _reposiory.Create(books);
         }
 
         public void Delete(long id)
         {
-             _repository.Delete(id);
+             _reposiory.Delete(id);
         }
-
+       
         public List<Books> FindAll()
         {
-            return _repository.FindAll();
+            return _reposiory.FindAll();
         }
 
         public Books FindByID(long id)
         {
-            return _repository.FindByID(id);
+            return _reposiory.FindByID(id);
         }
 
         public Books Update(Books books)
         {
-            return _repository.Update(books);
+            return _reposiory.Update(books);
         }
+       
     }
 }

@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using RestFullAspNet.Model.Base;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestFullAspNet.Model
 {
     [Table("Books")]
-    public class Books
-    {
-        [Column("id")]
-        public long id { get; set; }
+    public class Books : BaseEntity
+    {      
         [Column("author")]
-        public string author { get; set; }
+        public string Author { get; set; }
         [Column("launch_date")]
-        public DateTime launch_date { get; set; }
+        public DateTime LaunchDate { get; set; }
         [Column("price")]
-        public decimal price { get; set; }
+        public decimal Price { get; set; }
         [Column("title")]
-        public string title { get; set; }
+        public string Title { get; set; }
 
     }
 }

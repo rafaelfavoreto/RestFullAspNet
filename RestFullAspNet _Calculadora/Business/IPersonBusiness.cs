@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RestFullAspNet.Business
 {
-    public interface IPersonBusiness { 
+    public interface IPersonBusiness {
         Person Create(Person person);
         Person FindByID(long id);
         List<Person> FindAll();

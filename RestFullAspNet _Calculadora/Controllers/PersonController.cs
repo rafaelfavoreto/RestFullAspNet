@@ -8,10 +8,10 @@ namespace RestFullAspNet.Controllers
     [ApiVersion("1")]
     [ApiController]
     [Route("api/[controller]/v{version:apiVersion}")]
-    
+
     public class PersonController : ControllerBase
     {
-        
+
         private readonly ILogger<PersonController> _logger;
         private IPersonBusiness _personBusiness;
 
@@ -22,7 +22,7 @@ namespace RestFullAspNet.Controllers
         }
 
         [HttpGet]
-       public IActionResult Get()
+        public IActionResult Get()
         {
             return Ok(_personBusiness.FindAll());
         }
@@ -36,7 +36,7 @@ namespace RestFullAspNet.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Person person)
         {
-           
+
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Create(person));
         }
@@ -51,7 +51,7 @@ namespace RestFullAspNet.Controllers
         private decimal ConvertToDecimal(string strNumber)
         {
             decimal decimalValue;
-            if(decimal.TryParse(strNumber, out decimalValue))
+            if (decimal.TryParse(strNumber, out decimalValue))
             {
                 return decimalValue;
             }
@@ -61,7 +61,7 @@ namespace RestFullAspNet.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
-            _personBusiness.Delete(id);            
+            _personBusiness.Delete(id);
             return NoContent();
         }
 
