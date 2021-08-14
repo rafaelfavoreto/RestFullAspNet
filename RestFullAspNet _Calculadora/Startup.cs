@@ -40,6 +40,13 @@ namespace RestFullAspNet
         // his mehod ges called by he runime. Use his mehod o add services o he conainer.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddDefaultPolicy(builder =>
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            }));
+
             services.AddControllers();
 
             var connection = Configuration["MySqlConection:MySqlConectionString"];
@@ -104,6 +111,9 @@ namespace RestFullAspNet
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //Chamar o Cors
+            app.UseCors();
 
             // SWagger
             app.UseSwagger();
