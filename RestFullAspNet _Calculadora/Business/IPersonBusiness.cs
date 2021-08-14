@@ -1,13 +1,15 @@
-﻿using RestFullAspNet.Model;
+﻿using RestFullAspNet.Data.VO;
+using RestFullAspNet.Model;
 using System.Collections.Generic;
 
 namespace RestFullAspNet.Business
 {
-    public interface IPersonBusiness {
-        Person Create(Person person);
-        Person FindByID(long id);
-        List<Person> FindAll();
-        Person Update(Person person);
+    public interface IPersonBusiness
+    {
+        PersonVO Create(PersonVO person);
+        PersonVO FindByID(long id);
+        List<PersonVO> FindAll();
+        PersonVO Update(PersonVO person);
         void Delete(long id);
     }
 }

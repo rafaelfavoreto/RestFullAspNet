@@ -1,9 +1,6 @@
 ﻿using RestFullAspNet.Hypermedia;
 using RestFullAspNet.Hypermedia.Abstract;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestFullAspNet.Data.VO
 {

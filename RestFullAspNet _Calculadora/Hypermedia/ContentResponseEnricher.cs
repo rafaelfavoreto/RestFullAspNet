@@ -12,18 +12,20 @@ namespace RestFullAspNet.Hypermedia
 {
     public abstract class ContentResponseEnricher<T> : IResponseEnricher where T : ISupportHyperMedia
     {
-        public ContentResponseEnricher(){}
-
-        public bool CanEnrich(Type contextType)
+        public ContentResponseEnricher()
         {
-            return contextType == typeof(T) || contextType == typeof(List<T>);
+
+        }
+        public virtual bool CanEnrich(Type contentType)
+        {
+            return contentType == typeof(T) || contentType == typeof(List<T>);
         }
 
         protected abstract Task EnrichModel(T content, IUrlHelper urlHelper);
 
         bool IResponseEnricher.CanEnrich(ResultExecutingContext response)
         {
-            if(response.Result is OkObjectResult okObjectResult)
+            if (response.Result is OkObjectResult okObjectResult)
             {
                 return CanEnrich(okObjectResult.Value.GetType());
             }
@@ -34,19 +36,20 @@ namespace RestFullAspNet.Hypermedia
             var urlHelper = new UrlHelperFactory().GetUrlHelper(response);
             if (response.Result is OkObjectResult okObjectResult)
             {
-                if(okObjectResult.Value is T model)
+                if (okObjectResult.Value is T model)
                 {
                     await EnrichModel(model, urlHelper);
-                }else if(okObjectResult.Value is List<T> collection)
+                }
+                else if (okObjectResult.Value is List<T> collection)
                 {
                     ConcurrentBag<T> bag = new ConcurrentBag<T>(collection);
                     Parallel.ForEach(bag, (element) =>
-                     {
-                         EnrichModel(element, urlHelper);
-                     });
+                    {
+                        EnrichModel(element, urlHelper);
+                    });
                 }
-                await Task.FromResult<object>(null);
             }
+            await Task.FromResult<object>(null);
         }
     }
 }

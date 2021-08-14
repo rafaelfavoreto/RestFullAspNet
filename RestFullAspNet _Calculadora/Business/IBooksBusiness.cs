@@ -1,14 +1,15 @@
-﻿using RestFullAspNet.Model;
+﻿using RestFullAspNet.Data.VO;
+using RestFullAspNet.Model;
 using System.Collections.Generic;
 
 namespace RestFullAspNet.Business
 {
     public interface IBooksBusiness 
     {
-        Books Create(Books books);
-        Books FindByID(long id);
-        Books Update(Books books);
-        List<Books> FindAll();
+        BookVO Create(BookVO books);
+        BookVO FindByID(long id);
+        BookVO Update(BookVO books);
+        List<BookVO> FindAll();
         void Delete(long id);
     }
 }

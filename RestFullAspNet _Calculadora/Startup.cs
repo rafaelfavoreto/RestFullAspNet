@@ -47,20 +47,23 @@ namespace RestFullAspNet
             {
                 MigrateDataBase(connection);
             }
-            //Export for Xml To
+            //Export for Xml To       
             services.AddMvc(options =>
             {
                 options.RespectBrowserAcceptHeader = true;
 
                 options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
                 options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
-            }).AddXmlSerializerFormatters();
+            })
+           .AddXmlSerializerFormatters();
 
             //HATEOAS
+         
             var filterOptions = new HyperMediaFilterOptions();
             filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentResponseEnricherList.Add(new BooksEnricher());           
 
-            services.AddSingleton(filterOptions);
+            services.AddSingleton(filterOptions);          
 
             //Versioning API
             services.AddApiVersioning();
@@ -84,11 +87,11 @@ namespace RestFullAspNet
             app.UseRouting();
 
             app.UseAuthorization();
-
+         
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapControllerRoute("DefaultApi", "{controller=value}/{id?}");
+                endpoints.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
             });
         }
         private void MigrateDataBase(string connection)

@@ -24,13 +24,13 @@ namespace RestFullAspNet.Hypermedia.Filters
 
         private void TryEnrichResult(ResultExecutingContext context)
         {
-            if(context.Result is OkObjectResult objectresult) // significa se obteve sucesso na chamada
+            if (context.Result is OkObjectResult objectResult)
             {
                 var enricher = _hyperMediaFilterOptions
                     .ContentResponseEnricherList
-                    .FirstOrDefault(x => x.CanEnrich(context)); // verifica se Canrich é null
+                    .FirstOrDefault(x => x.CanEnrich(context));
                 if (enricher != null) Task.FromResult(enricher.Enrich(context));
-            }
+            };
         }
     }
 }

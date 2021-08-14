@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace RestFullAspNet.Data.Convert.Implementations
 {
-    public class BookConverter : IParser<BookVO, Books>, IParser<Books, BookVO>
+    public class BookConverter : IParser<BookVO, BooksVO>, IParser<BooksVO, BookVO>
     {
-        public Books Parse(BookVO origin)
+        public BooksVO Parse(BookVO origin)
         {
             if (origin == null) return null;
-            return new Books
+            return new BooksVO
             {
                 Id = origin.Id,
                 Author = origin.Author,
@@ -23,7 +23,7 @@ namespace RestFullAspNet.Data.Convert.Implementations
             };
         }
 
-        public BookVO Parse(Books origin)
+        public BookVO Parse(BooksVO origin)
         {
             if (origin == null) return null;
             return new BookVO
@@ -36,13 +36,13 @@ namespace RestFullAspNet.Data.Convert.Implementations
             };
         }
 
-        public List<Books> Parse(List<BookVO> origin)
+        public List<BooksVO> Parse(List<BookVO> origin)
         {
             if (origin == null) return null;
             return origin.Select(item => Parse(item)).ToList();
         }
 
-        public List<BookVO> Parse(List<Books> origin)
+        public List<BookVO> Parse(List<BooksVO> origin)
         {
             if (origin == null) return null;
             return origin.Select(item => Parse(item)).ToList();

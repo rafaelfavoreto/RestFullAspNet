@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestFullAspNet.Business;
+using RestFullAspNet.Data.VO;
+using RestFullAspNet.Hypermedia.Filters;
 using RestFullAspNet.Model;
 
 namespace RestFullAspNet.Controllers
@@ -20,11 +22,13 @@ namespace RestFullAspNet.Controllers
         }
 
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_booksBusiness.FindAll());
         }
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get (long id)
         {
             var book = _booksBusiness.FindByID(id);
@@ -32,13 +36,15 @@ namespace RestFullAspNet.Controllers
             return Ok(book);
         }
         [HttpPost]
-        public IActionResult Post([FromBody] Books books)
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Post([FromBody] BookVO books)
         {
             if (books == null) return BadRequest();
             return Ok(_booksBusiness.Create(books));
         }
         [HttpPut]
-        public IActionResult Put([FromBody] Books books)
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Put([FromBody] BookVO books)
         {
             if (books == null) return BadRequest();
             return Ok(_booksBusiness.Update(books));
