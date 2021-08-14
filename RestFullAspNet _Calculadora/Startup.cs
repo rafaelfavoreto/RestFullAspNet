@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Net.Http.Headers;
+using Microsoft.OpenApi.Models;
 using RestFullAspNet.Business;
 using RestFullAspNet.Business.Implementations;
 using RestFullAspNet.Hypermedia.Enricher;
@@ -68,6 +70,23 @@ namespace RestFullAspNet
             //Versioning API
             services.AddApiVersioning();
 
+            //Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Curso RestFull",
+                        Version = "v1",
+                        Description = "Curso de Api e RestFull",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Rafael Favoreto",
+                            Url = new Uri("https://github.com/rafaelfavoreto/RestFullAspNet_OLD")
+                        }
+                    });
+            });
+
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();           
             services.AddScoped<IBooksBusiness, BooksBusinessImplementation>();
@@ -85,6 +104,17 @@ namespace RestFullAspNet
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // SWagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso RestFull");
+            });
+
+            var option = new RewriteOptions();
+            option.AddRedirect("^$", "swagger");
+            app.UseRewriter(option);
 
             app.UseAuthorization();
          
