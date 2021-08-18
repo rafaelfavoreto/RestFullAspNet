@@ -13,5 +13,6 @@ namespace RestFullAspNet.Model.Context
 
         public DbSet<Person> Persons { get; set; }
         public DbSet<BooksVO> Books { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
