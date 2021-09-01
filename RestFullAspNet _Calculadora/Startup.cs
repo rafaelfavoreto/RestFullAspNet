@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
@@ -5,18 +7,24 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using RestFullAspNet.Business;
 using RestFullAspNet.Business.Implementations;
+using RestFullAspNet.Configuration;
 using RestFullAspNet.Hypermedia.Enricher;
 using RestFullAspNet.Hypermedia.Filters;
 using RestFullAspNet.Model.Context;
 using RestFullAspNet.Repository;
 using RestFullAspNet.Repository.Generic;
+using RestFullAspNet.Services;
+using RestFullAspNet.Services.Implemetations;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace RestFullAspNet
 {
@@ -40,6 +48,38 @@ namespace RestFullAspNet
         // his mehod ges called by he runime. Use his mehod o add services o he conainer.
         public void ConfigureServices(IServiceCollection services)
         {
+            var tokenConfigurations = new TokenConfiguration();
+            new ConfigureFromConfigurationOptions<TokenConfiguration>(
+                Configuration.GetSection("TokenConfiguration")).Configure(tokenConfigurations);
+
+            services.AddSingleton(tokenConfigurations);
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = tokenConfigurations.Issuer,
+                    ValidAudience = tokenConfigurations.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret))
+                };
+            });
+
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                    .RequireAuthenticatedUser().Build());
+            });
+
             services.AddCors(options => options.AddDefaultPolicy(builder =>
             {
                 builder.AllowAnyOrigin()
@@ -97,6 +137,11 @@ namespace RestFullAspNet
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();           
             services.AddScoped<IBooksBusiness, BooksBusinessImplementation>();
+            services.AddScoped<IloginBusiness, LoginBusinessImplementation>();
+
+            services.AddTransient<ITokenServices, TokenServices>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
 
             services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
         }

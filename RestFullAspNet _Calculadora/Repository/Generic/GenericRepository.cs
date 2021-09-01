@@ -11,7 +11,7 @@ namespace RestFullAspNet.Repository.Generic
 
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private MysqlContext _context;
+        protected MysqlContext _context;
 
         private DbSet<T> dataset;
 

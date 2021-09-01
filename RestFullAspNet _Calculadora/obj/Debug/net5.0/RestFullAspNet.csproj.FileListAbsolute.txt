@@ -1,3 +1,9 @@
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.AssemblyInfoInputs.cache
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.AssemblyInfo.cs
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\appsettings.json
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\RestFullAspNet.exe
@@ -8,6 +14,7 @@ C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\ref\RestFullAspNet.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\RestFullAspNet.pdb
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Evolve.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
@@ -16,6 +23,11 @@ C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\MySqlConnector.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Newtonsoft.Json.dll
@@ -33,13 +45,7 @@ C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.csprojAssemblyReference.cache
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.AssemblyInfoInputs.cache
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.AssemblyInfo.cs
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.csproj.CoreCompileInputs.cache
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\staticwebassets\RestFullAspNet.StaticWebAssets.Manifest.cache
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\staticwebassets\RestFullAspNet.StaticWebAssets.xml
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\scopedcss\bundle\RestFullAspNet.styles.css
@@ -49,10 +55,4 @@ C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\ref\RestFullAspNet.dll
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.pdb
 C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.genruntimeconfig.cache
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Rafael\Desktop\RestFull\RestFULLASP.NET\RestFULLASP.NET\RestFullAspNet\RestFullAspNet _Calculadora\obj\Debug\net5.0\RestFullAspNet.csprojAssemblyReference.cache

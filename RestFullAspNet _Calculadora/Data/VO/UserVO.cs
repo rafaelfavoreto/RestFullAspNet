@@ -7,7 +7,7 @@ namespace RestFullAspNet.Data.VO
 {
     public class UserVO
     {
-        public string UserName { get; internal set; }
-        public string Password { get; internal set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 }

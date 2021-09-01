@@ -3,15 +3,13 @@ using RestFullAspNet.Model;
 using RestFullAspNet.Model.Context;
 using RestFullAspNet.Repository.Generic;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace RestFullAspNet.Repository
 {
-    public class UserRepository : IUserrepository
+    public class UserRepository : IUserRepository
     {
         private readonly MysqlContext _context;
 
@@ -43,10 +41,24 @@ namespace RestFullAspNet.Repository
            
         }
 
+        public bool RevokeToken(string UserName)
+        {
+            var user = _context.Users.SingleOrDefault(u => (u.UserName == UserName));
+            if (user is null) return false;
+            user.RefreshToken = null;
+            _context.SaveChanges();
+            return true;
+        }
+
         public User ValidateCredentials(UserVO user)
         {
             var pass = ComputeHash(user.Password, new SHA256CryptoServiceProvider());
             return _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
+        }
+
+        public User ValidateCredentials(string username)
+        {
+            return _context.Users.SingleOrDefault(u => (u.UserName == username));
         }
 
         private object ComputeHash(string input, SHA256CryptoServiceProvider algorithm)
