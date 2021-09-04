@@ -1,0 +1,21 @@
+sudo: required
+dist: bionic
+language: csharp
+mono: none
+dotnet: 2.0.0
+services: docker
+before_install:
+  - cd RestFullAspNet/RestFullAspNet _Calculadora
+script:
+  - docker-compose build
+before_deploy:
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+deploy:
+  provider: script
+  script:
+    docker tag rest-full-aspnet:latest $DOCKER_USERNAME/rest-full-aspnet:latest;
+    docker push $DOCKER_USERNAME/rest-full-aspnet:latest;
+  on:
+    brach: master
+notifications:
+  email: false
