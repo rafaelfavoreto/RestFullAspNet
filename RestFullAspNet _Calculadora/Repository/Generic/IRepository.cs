@@ -11,7 +11,10 @@ namespace RestFullAspNet.Repository
             List<T> FindAll();
             T Update(T item);
             void Delete(long id);
-            bool Exists(long id);
+            bool Exists(long id);   
+            List<T> FindWithPageSearch(string query);
+            int GetCount(string query);
+
         }
     }
 

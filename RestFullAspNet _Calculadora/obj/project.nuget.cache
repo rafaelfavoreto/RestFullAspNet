@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LydsEyI/if1rIPuldeHtzIpwFJqZ4a510J5h158ZaUyr3Z2PwBuFNqUtDLXisG6rQ0F8bxV12+J2F3QSgVlPVQ==",
+  "dgSpecHash": "tKnhVR89KhwgmyEI9LKIopaIKchCjhXGQD5N+5F6gU7M+95ouO+H6LOzZ7jOixeA7Ypu3eaw9gK720Ehb2OL6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rafael\\Desktop\\RestFull\\RestFULLASP.NET\\RestFULLASP.NET\\RestFullAspNet\\RestFullAspNet _Calculadora\\RestFullAspNet.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\Rafael\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Rafael\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\Rafael\\.nuget\\packages\\mysqlconnector\\0.61.0\\mysqlconnector.0.61.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Rafael\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\3.1.2\\pomelo.entityframeworkcore.mysql.3.1.2.nupkg.sha512",
